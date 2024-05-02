@@ -52,5 +52,7 @@ defmodule Frontline.Repo.Migrations.InitialSchema do
 
       timestamps()
     end
+
+    create unique_index(:shifts, [:id, :organisation_id])
   end
 end
